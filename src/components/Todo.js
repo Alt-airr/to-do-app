@@ -6,7 +6,7 @@ function Todo({todo, remove, update, toggleComplete}) {
     const [isEditing, setIsEditing] = useState(false);
     const [task, setTask] = useState(todo);
 
-    const handleClick = evt => {
+    const handleDelete = evt => {
         remove(evt.target.id);
     };
     const toggleFrom = () => {
@@ -43,14 +43,14 @@ function Todo({todo, remove, update, toggleComplete}) {
                 <li id={todo.id}>
                     <input type="checkbox" checked={todo.completed} onChange={toggleCompleted}/>
                     <NavLink to={`/todos/${todo.id}`} className={todo.completed ? "Todo-task completed" : "Todo-task"}>
-                      {todo.title}
+                        {todo.title}
                     </NavLink>
                 </li>
                 <div className="Todo-buttons">
                     <button onClick={toggleFrom}>
                         <i className="fas fa-pen"/>
                     </button>
-                    <button onClick={handleClick}>
+                    <button onClick={handleDelete}>
                         <i id={todo.id} className="fas fa-trash"/>
                     </button>
                 </div>

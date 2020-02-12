@@ -1,6 +1,8 @@
 .ToDoDetail {
     width: 100%;
+    max-width: 500px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .ToDoDetail .btn {
@@ -8,11 +10,13 @@
 }
 .ToDoDetail h1 {
     font-size: 40px;
+    max-width: 500px;
 }
+
+
 .ToDoDetail ul {
     list-style: none;
     font-size: 15px;
-    font-family: 'Open Sans';
     color: #9095aa;
     padding: 0px;
     margin: 0px;
@@ -35,6 +39,10 @@
     -23px 0 20px -23px rgba(0, 0, 0, .8),
     23px 0 20px -23px rgba(0, 0, 0, .8),
     0 0 40px rgba(0, 0, 0, .1) inset;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .title {
@@ -44,10 +52,13 @@
     color: white;
     height: 62px;
     border-bottom: 3px solid #bfa30c;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+    white-space: nowrap;
 }
 
 .title p {
-    font-family: 'Open Sans';
     font-weight: 800;
     font-size: 29px;
     text-transform: uppercase;
@@ -68,4 +79,5 @@
 .nav {
     height: 80px;
     padding: 20px;
+    margin: 0;
 }

@@ -11,9 +11,17 @@
   font-size: 22px;
 }
 
+.Todo li {
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
 .Todo-task {
   position: relative;
   transition: opacity 0.4s linear;
+
 }
 
 .Todo-task.completed {

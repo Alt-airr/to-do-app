@@ -1,29 +1,28 @@
-import React, {useReducer} from "react";
+import React, {useReducer, useState} from "react";
 import uuid from "uuid";
 import "./css/newTodoForm.css";
 
 function NewTodoForm({createTodo}) {
-    const [userInput, setUserInput] = useReducer(
-        (state, newState) => ({...state, ...newState}),
-        {
-            task: ""
-        }
-    );
+
+
+    const [task, setTask] = useState({title: '', description: ''});
 
     const handleChange = evt => {
-        setUserInput({[evt.target.name]: evt.target.value});
+        setTask({...task, [evt.target.name]: evt.target.value});
     };
 
     const handleSubmit = evt => {
         evt.preventDefault();
         const newTodo = {
             id: uuid(),
-            title: userInput.task,
-            description: userInput.description,
+            title: task.title,
+            description: task.description,
             completed: false
         };
-        createTodo(newTodo);
-        setUserInput({task: ""});
+        if(task.title.length > 3) { createTodo(newTodo);
+        setTask({title: '', description: ''});} else {
+            alert ('Please, enter title (at least 3 characters)')
+        }
     };
 
     return (
@@ -32,13 +31,15 @@ function NewTodoForm({createTodo}) {
             <input
                 onChange={handleChange}
                 type="text"
-                name="task"
+                name="title"
+                value={task.title || ''}
                 className='inpt'
                 placeholder="Title"
             />
             <textarea
                 onChange={handleChange}
                 type="text"
+                value={task.description || ''}
                 className='inpt'
                 name="description"
                 placeholder="Description"
