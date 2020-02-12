@@ -32,6 +32,7 @@ function NewTodoForm({createTodo}) {
                 onChange={handleChange}
                 type="text"
                 name="title"
+                maxLength='100'
                 value={task.title || ''}
                 className='inpt'
                 placeholder="Title"
@@ -41,6 +42,7 @@ function NewTodoForm({createTodo}) {
                 type="text"
                 value={task.description || ''}
                 className='inpt'
+                maxLength='400'
                 name="description"
                 placeholder="Description"
             />
