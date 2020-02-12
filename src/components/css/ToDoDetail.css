@@ -1,0 +1,71 @@
+.ToDoDetail {
+    width: 100%;
+    text-align: center;
+}
+
+.ToDoDetail .btn {
+    position: absolute;
+}
+.ToDoDetail h1 {
+    font-size: 40px;
+}
+.ToDoDetail ul {
+    list-style: none;
+    font-size: 15px;
+    font-family: 'Open Sans';
+    color: #9095aa;
+    padding: 0px;
+    margin: 0px;
+}
+
+.ToDoDetail li {
+    border-bottom: 1px solid #494a5a;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    height: 52px;
+    line-height: 52px;
+}
+
+.whole {
+    display: inline-block;
+    min-width: 500px;
+    margin-top: 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3),
+    -23px 0 20px -23px rgba(0, 0, 0, .8),
+    23px 0 20px -23px rgba(0, 0, 0, .8),
+    0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.title {
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #212026;
+    color: white;
+    height: 62px;
+    border-bottom: 3px solid #bfa30c;
+}
+
+.title p {
+    font-family: 'Open Sans';
+    font-weight: 800;
+    font-size: 29px;
+    text-transform: uppercase;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+.info {
+    width: 100%;
+    background-color: #2b2937;
+    border-radius: 0px 0px 5px 5px;
+    font-style: condensed;
+    font-size: 90px;
+    color: white;
+    text-align: center;
+}
+
+.nav {
+    height: 80px;
+    padding: 20px;
+}
